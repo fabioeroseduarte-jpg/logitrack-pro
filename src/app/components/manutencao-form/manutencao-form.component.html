@@ -1,0 +1,53 @@
+<div class="container mt-4">
+  <h2 class="text-primary mb-4">Nova Manutenção</h2>
+  <form (ngSubmit)="salvar()">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="veiculoId" class="form-label">Veículo</label>
+        <input id="veiculoId" type="number" class="form-control"
+               [(ngModel)]="manutencao.veiculoId" name="veiculoId" required>
+      </div>
+      <div class="col-md-6">
+        <label for="tipoServico" class="form-label">Tipo de Serviço</label>
+        <input id="tipoServico" type="text" class="form-control"
+               [(ngModel)]="manutencao.tipoServico" name="tipoServico" required>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="dataInicio" class="form-label">Data de Início</label>
+        <input id="dataInicio" type="date" class="form-control"
+               [(ngModel)]="manutencao.dataInicio" name="dataInicio" required>
+      </div>
+      <div class="col-md-6">
+        <label for="dataFinalizacao" class="form-label">Data de Finalização</label>
+        <input id="dataFinalizacao" type="date" class="form-control"
+               [(ngModel)]="manutencao.dataFinalizacao" name="dataFinalizacao">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="custoEstimado" class="form-label">Custo Estimado</label>
+        <input id="custoEstimado" type="number" step="0.01" class="form-control"
+               [(ngModel)]="manutencao.custoEstimado" name="custoEstimado" required>
+      </div>
+      <div class="col-md-6">
+        <label for="status" class="form-label">Status</label>
+        <select id="status" class="form-select"
+                [(ngModel)]="manutencao.status" name="status" required>
+          <option value="PENDENTE">Pendente</option>
+          <option value="EM_REALIZACAO">Em Realização</option>
+          <option value="CONCLUIDA">Concluída</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <button type="submit" class="btn btn-primary me-2">Salvar</button>
+      <button type="reset" class="btn btn-outline-secondary me-2">Cancelar</button>
+      <button type="button" class="btn btn-outline-dark" (click)="voltar()">Voltar</button>
+    </div>
+  </form>
+</div>
