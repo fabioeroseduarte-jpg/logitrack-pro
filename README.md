@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🚚 LogiTrack Pro
 
 MVP de um sistema de gerenciamento de frotas e operações logísticas, desenvolvido para centralizar informações de veículos, viagens e manutenções, oferecendo relatórios e inteligência de dados para gestores.
